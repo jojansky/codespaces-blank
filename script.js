@@ -32,10 +32,12 @@ function renderSchedule(scheduleData) {
         scheduleContainer.innerHTML = "<p>No content available.</p>";
         return;
     }
+    const date = new Date(currentDay.date);
+    const formattedDate = formatDate(date);
     const videoEmbedUrl = `https://www.youtube.com/embed/${currentDay.videoId}`;
 
     scheduleContainer.innerHTML = `
-        <h3>${currentDay.date}</h3>
+        <h3>${formattedDate}</h3>
         <div class="video-container">
             <iframe width="560" height="315" src="${videoEmbedUrl}" frameborder="0" allowfullscreen></iframe>
         </div>
@@ -46,6 +48,12 @@ function renderSchedule(scheduleData) {
     `;
 
     updateNavigationButtons(scheduleData);
+}
+
+function formatDate(date) {
+    // Format date as "Month Day, Year"
+    const options = { month: 'long', day: 'numeric', year: 'numeric' };
+    return date.toLocaleDateString('en-US', options);
 }
 
 function updateNavigationButtons(scheduleData) {
