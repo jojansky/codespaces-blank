@@ -1,19 +1,100 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #f7f7f7;
+    color: #333;
 }
 
 .container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin: 20px;
 }
 
 h1 {
     text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #8a4af3; /* Fun shade of purple */
+}
+
+.day {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    margin-bottom: 20px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #8a4af3; /* Fun shade of purple */
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #8a4af3; /* Fun shade of purple */
+    margin-top: 20px; /* Add spacing above the Additional Content section */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #8a4af3; /* Fun shade of purple */
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px; /* Add spacing above the Previous/Next buttons */
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 600px;
+        margin: 20px auto;
+    }
 }
