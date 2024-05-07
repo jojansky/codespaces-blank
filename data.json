@@ -1,0 +1,22 @@
+[
+    {
+        "date": "2024-05-01",
+        "videoId": "VIDEO_ID_1",
+        "additionalContent": [
+            {
+                "title": "Drawing Basics",
+                "link": "https://example.com/drawing-basics"
+            }
+        ]
+    },
+    {
+        "date": "2024-05-02",
+        "videoId": "VIDEO_ID_2",
+        "additionalContent": [
+            {
+                "title": "Shading Techniques",
+                "link": "https://example.com/shading-techniques"
+            }
+        ]
+    }
+]
