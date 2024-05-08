@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drawing Schedule</title>
+    <title>Draw Daily</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Drawing Schedule</h1>
+        <header>
+            <h1>Drawing Schedule</h1>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        </header>
+        <div class="sidebar">
+            <ul id="dateList"></ul>
+        </div>
         <div id="schedule"></div>
         <div class="navigation">
             <button id="prevDayBtn">Previous Day</button>

@@ -98,3 +98,53 @@ button:disabled {
         margin: 20px auto;
     }
 }
+/* Add this CSS to toggle sidebar visibility */
+.sidebar {
+    display: none;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f7f7f7;
+    overflow-x: hidden;
+    padding-top: 20px;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.show {
+    display: block;
+}
+
+/* Add this CSS to style the hamburger menu icon */
+.menu-icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above other content */
+}
+
+/* Add this CSS to style the sidebar */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Add media query for mobile */
+@media only screen and (max-width: 768px) {
+    .navigation {
+        display: none; /* Hide navigation buttons on mobile */
+    }
+    .container {
+        padding-top: 50px; /* Add space for fixed header */
+    }
+}

@@ -1,10 +1,16 @@
-let currentDayIndex = 0;
+// Function to toggle the flyout menu
+function toggleMenu() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('show');
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     // Load schedule data from JSON file
     fetch("data.json")
         .then(response => response.json())
         .then(data => {
+            // Populate the sidebar with dates
+            populateSidebar(data);
             // Find the index of the latest day with content
             const today = new Date().toISOString().split('T')[0];
             const latestDayIndex = findLatestDayIndex(data, today);
@@ -14,6 +20,44 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error("Error fetching data:", error));
 });
+
+function populateSidebar(scheduleData) {
+    const dateList = document.getElementById("dateList");
+    scheduleData.forEach((day, index) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = formatDate(new Date(day.date));
+        listItem.addEventListener('click', () => {
+            currentDayIndex = index;
+            renderSchedule(scheduleData);
+            toggleMenu(); // Close the menu on mobile
+            updateURL(day.date); // Update URL
+        });
+        dateList.appendChild(listItem);
+    });
+}
+
+function updateURL(date) {
+    const newUrl = window.location.href.split('?')[0] + `?date=${date}`;
+    window.history.pushState({ path: newUrl }, '', newUrl);
+}
+
+
+let currentDayIndex = 0;
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     // Load schedule data from JSON file
+//     fetch("data.json")
+//         .then(response => response.json())
+//         .then(data => {
+//             // Find the index of the latest day with content
+//             const today = new Date().toISOString().split('T')[0];
+//             const latestDayIndex = findLatestDayIndex(data, today);
+//             currentDayIndex = latestDayIndex !== -1 ? latestDayIndex : 0;
+//             renderSchedule(data);
+//             setupNavigation(data);
+//         })
+//         .catch(error => console.error("Error fetching data:", error));
+// });
 
 function findLatestDayIndex(scheduleData, currentDate) {
     // Find the latest day with content
