@@ -1,22 +1,20 @@
 [
     {
         "date": "2024-05-01",
-        "videoId": "VIDEO_ID_1",
-        "additionalContent": [
-            {
-                "title": "Drawing Basics",
-                "link": "https://example.com/drawing-basics"
-            }
-        ]
+        "title": "Basics - Values in Painting",
+        "videoUrl": "https://www.youtube.com/watch?v=tDdfPMTX15Y&t=2059",
+        "additionalNotes": "<p>Watch till 40 minutes. Draw the swatches of different value.</p><p>Tip: If you are dipping in the water touch the rim once or twice. to ensure the water is reduced. You can use a tissue paper as well.</p>"
     },
     {
         "date": "2024-05-02",
-        "videoId": "VIDEO_ID_2",
-        "additionalContent": [
-            {
-                "title": "Shading Techniques",
-                "link": "https://example.com/shading-techniques"
-            }
-        ]
+        "title": "Two Techniques - WOW and WOD",
+        "videoUrl": "https://www.youtube.com/watch?v=tDdfPMTX15Y&t=2404",
+        "additionalNotes": "<p>Watch till minutes 49 minutes. This demonstrtaes the Wet on Wet and Wet on Dry Technique. This is important to practice to understand what different techinque tends to look like</p>"
+    },
+    {
+        "date": "2024-05-03",
+        "title": "Brush holding Techinques",
+        "videoUrl": "https://www.youtube.com/watch?v=tDdfPMTX15Y&t=2967",
+        "additionalNotes": "<p>This video demonstrates holding a pen and drawing circles, leaves and complex strokes</p><p>In addition to this video watch the following video as well - https://www.youtube.com/watch?v=6Ydh00yehYY</p>"
     }
 ]
