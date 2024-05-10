@@ -141,9 +141,7 @@ button:disabled {
 
 /* Add media query for mobile */
 @media only screen and (max-width: 768px) {
-    .navigation {
-        display: none; /* Hide navigation buttons on mobile */
-    }
+
     .container {
         padding-top: 50px; /* Add space for fixed header */
     }
