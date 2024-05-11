@@ -24,7 +24,9 @@ export function updateURL(date) {
 
 export function toggleMenu() {
     const sidebar = document.querySelector('.sidebar');
+    const toggleSidebarBtn = document.getElementById("toggleSidebarBtn");
     sidebar.classList.toggle('show');
+    toggleSidebarBtn.classList.toggle("open"); 
 }
 
 function setupMenuItem() {
