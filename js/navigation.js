@@ -3,8 +3,8 @@ import { getCurrentDayIndex,setCurrentDayIndex } from "./scheduleState.js";
 
 export function setupNavigation(scheduleData) {
     const prevDayBtn = document.getElementById("prevDayBtn");
-    const currentDayIndex = getCurrentDayIndex();
     prevDayBtn.addEventListener("click", () => {
+        const currentDayIndex = getCurrentDayIndex();
         if (currentDayIndex > 0) {
             setCurrentDayIndex(currentDayIndex-1);
             renderSchedule(scheduleData);
@@ -13,6 +13,7 @@ export function setupNavigation(scheduleData) {
 
     const nextDayBtn = document.getElementById("nextDayBtn");
     nextDayBtn.addEventListener("click", () => {
+        const currentDayIndex = getCurrentDayIndex();
         if (currentDayIndex < scheduleData.length - 1) {
             setCurrentDayIndex(currentDayIndex+1)
             renderSchedule(scheduleData);
