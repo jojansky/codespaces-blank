@@ -1,11 +1,9 @@
-import { updateNavigationButtons } from  './navigation.js';
 import { formatDate, extractVideoInfo } from './utils.js';
 import { getCurrentDayIndex,setCurrentDayIndex } from './scheduleState.js';
+import { render } from './controller.js';
 
-export function renderSchedule(scheduleData) {
+export function renderSchedule(currentDay) {
     const scheduleContainer = document.getElementById("schedule");
-    const currentDayIndex = getCurrentDayIndex();
-    const currentDay = scheduleData[currentDayIndex];
     if (!currentDay) {
         scheduleContainer.innerHTML = "<p>No content available.</p>";
         return;
@@ -33,30 +31,4 @@ export function renderSchedule(scheduleData) {
         </div>
     `;
 
-    updateNavigationButtons(scheduleData);
-}
-
-export function populateSidebar(scheduleData) {
-    const dateList = document.getElementById("dateList");
-    scheduleData.forEach((day, index) => {
-        const listItem = document.createElement('li');
-        listItem.textContent = formatDate(new Date(day.date));
-        listItem.addEventListener('click', () => {
-            setCurrentDayIndex(index);
-            renderSchedule(scheduleData);
-            toggleMenu(); // Close the menu on mobile
-            updateURL(day.date); // Update URL
-        });
-        dateList.appendChild(listItem);
-    });
-}
-
-export function updateURL(date) {
-    const newUrl = window.location.href.split('?')[0] + `?date=${date}`;
-    window.history.pushState({ path: newUrl }, '', newUrl);
-}
-
-export function toggleMenu() {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.classList.toggle('show');
 }
