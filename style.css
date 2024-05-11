@@ -2,13 +2,20 @@ body {
     font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
+    background-color: #f3f3f3;
     color: #333;
 }
 
 .container {
     max-width: 100%;
     margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
 }
 
 h1 {
@@ -98,25 +105,7 @@ button:disabled {
         margin: 20px auto;
     }
 }
-/* Add this CSS to toggle sidebar visibility */
-.sidebar {
-    display: none;
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #f7f7f7;
-    overflow-x: hidden;
-    padding-top: 20px;
-    z-index: 1000; /* Ensure it's above other content */
-}
 
-.show {
-    display: block;
-}
-
-/* Add this CSS to style the hamburger menu icon */
 .menu-icon {
     display: block;
     position: absolute;
@@ -124,7 +113,45 @@ button:disabled {
     right: 20px;
     font-size: 24px;
     cursor: pointer;
-    z-index: 1001; /* Ensure it's above other content */
+    z-index: 1001;
+    padding: 4px;
+    margin-top: 0px;
+    border-radius: 20px;
+    width: 40px;
+    box-sizing: border-box;
+}
+
+.menu-icon:before {
+    content: "\2630"; /* Unicode character for menu icon */
+    font-size: 24px;
+    transition: transform 0.3s ease; /* Transition for icon transformation */
+}
+
+.menu-icon.open:before {
+    content: "\2716"; /* Unicode character for close icon */
+    transform: rotate(90deg); /* Rotate the close icon */
+}
+
+/*===[ Sidebar ]=== */
+.sidebar {
+    overflow-x: hidden;
+    padding-top: 50px;
+    width: 300px;
+    height: 100%;
+    background-color: #fff; /* Changed background color */
+    position: fixed;
+    top: 0;
+    right: -300px; /* Initially off-screen */
+    z-index: 1000;
+    transition: right 0.3s ease; /* Animate the transition */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Added box shadow */
+}
+
+.show {
+    display: block;
+}
+.sidebar.show {
+    right: 0px;
 }
 
 /* Add this CSS to style the sidebar */
@@ -141,8 +168,14 @@ button:disabled {
 
 /* Add media query for mobile */
 @media only screen and (max-width: 768px) {
-
-    .container {
-        padding-top: 50px; /* Add space for fixed header */
+    h1 {
+        text-align: left;
+        margin-top: 0px;
+    }
+    .sidebar {
+        width: 250px;
+    }
+    .content {
+        padding: 0px;
     }
 }

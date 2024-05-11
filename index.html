@@ -8,17 +8,17 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Draw Daily</h1>
-            <div class="menu-icon" >&#9776;</div>
-        </header>
-        <div class="sidebar">
-            <ul id="dateList"></ul>
+        <button id="toggleSidebarBtn" class="menu-icon"></button>
+        <div class="sidebar" id="sidebar">
+            <div class="date-list" id="dateList"></div>
         </div>
-        <div id="schedule"></div>
-        <div class="navigation">
-            <button id="prevDayBtn">Previous Day</button>
-            <button id="nextDayBtn" disabled>Next Day</button>
+        <div class="content" id="content">
+            <h1>Drawing Schedule</h1>
+            <div id="schedule"></div>
+            <div class="navigation">
+                <button id="prevDayBtn">Previous Day</button>
+                <button id="nextDayBtn" disabled>Next Day</button>
+            </div>
         </div>
     </div>
     
