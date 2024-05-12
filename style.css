@@ -177,5 +177,6 @@ button:disabled {
     }
     .content {
         padding: 0px;
+        width: 100%;
     }
 }
