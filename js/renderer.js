@@ -15,8 +15,8 @@ export function renderSchedule(currentDay) {
     const additionalLinks = getAdditionalLinks(currentDay);
 
     scheduleContainer.innerHTML = `
-        <h3>${formattedDate}</h3>
-        <h2>${title}</h2>
+        <p class="day-text"><i>${formattedDate}</i></p>
+        <h2 class="post-title">${title}</h2>
         <div class="video-container">
             <iframe width="560" height="315" src="${getYTEmbedURL(videoUrl)}" frameborder="0" allowfullscreen></iframe>
         </div>
