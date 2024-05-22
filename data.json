@@ -31,7 +31,19 @@
     },{
         "date": "2024-05-04",
         "title": " Easiest Way to Paint TEN Flowers with Watercolor!",
-        "videoUrl": "https://www.youtube.com/watch?v=NcRLrNVrfMM",
-        "additionalNotes": "<p>The flowers that are taught are lavender, black eyed susan, rose, cherry blossom, tulip, anemone, poppy, zinnia, delphinium, and a sunflower! </p>"
+        "videoUrl": "https://www.youtube.com/watch?v=NcRLrNVrfMM&t=0",
+        "additionalNotes": "<p>The flowers that are taught are lavender, black eyed susan, rose, cherry blossom, tulip, anemone, poppy, zinnia, delphinium, and a sunflower! </p>",
+        "additionalLinks":[
+            {
+                "title": "Ten More Flowers",
+                "url": "https://www.youtube.com/watch?v=2__3fLFv5XI&t=0",
+                "type": "youtube"
+            }
+            ,{
+                "title": "Easiest Fall Flowers",
+                "url": "https://www.youtube.com/watch?v=xFUlSWvlKIQ&t=0",
+                "type": "youtube"
+            }
+        ]
     }
 ]
