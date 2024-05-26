@@ -22,11 +22,6 @@
                 "url": "https://www.youtube.com/watch?v=6Ydh00yehYY&t=0",
                 "type": "youtube"
             }
-            ,{
-                "title": "Example Website",
-                "url": "https://example.com",
-                "type": "website"
-            }
         ]
     },{
         "date": "2024-05-04",
@@ -120,7 +115,14 @@
                 "title": "Abstract Greeting Cards",
                 "url":"https://www.youtube.com/watch?v=C0Gqb07LMKE&t=0",
                 "type":"youtube"
+            },
+            {
+                "title": "Tiny Landscape",
+                "url":"https://www.youtube.com/watch?v=EJnTRMdR9Ic&t=0",
+                "type":"youtube"
             }
+            
+            https://www.youtube.com/watch?v=EJnTRMdR9Ic
         ]
     }
 
