@@ -122,6 +122,28 @@
                 "type":"youtube"
             }
         ]
+    },
+    {
+        "date": "2024-05-10",
+        "title": "",
+        "videoUrl": "https://www.youtube.com/watch?v=xkvs_w__BHE&t=0",
+        "additionalNotes": "<p>Ink And Wash</p>",
+        "additionalLinks":[
+            {
+                "title": "Ink and Wash Watercolor Values- Santorini windmill",
+                "url":"https://www.youtube.com/watch?v=nmDRtWE_bys&t=0",
+                "type":"youtube"
+            },
+            {
+                "title": "Ink and Wash ideas for beginners",
+                "url":"https://www.youtube.com/watch?v=O2OsiLTnLmE&t=0",
+                "type":"youtube"
+            },
+            {
+                "title": "Ink and Wash Minis",
+                "url":"https://www.youtube.com/watch?v=6bieuiH77MA&t=0",
+                "type":"youtube"
+            }
+        ]
     }
-
 ]
